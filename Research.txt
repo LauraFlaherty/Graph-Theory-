@@ -12,11 +12,33 @@ For example, the regular expression 0.1 means a 0 followed by a 1, 0|1 means
 a 0 or a 1, and 1* means any number of 1’s. These special characters must
 be used in your submission.
 
+Steps expected to take in this project:
+
+1. Parse the regular expression from infix to postfix notation.
+2. Build a series of small NFA’s for parts of the regular expression.
+3. Use the smaller NFA’s to create the overall NFA.
+4. Implement the matching algorithm using the NFA.
+
 What is an NFA? 
 According to wikipedia, 
 In automata theory, a finite state machine is called a deterministic finite automaton (DFA), if
-
 a : each of its transitions is uniquely determined by its source state and input symbol, and
 b : reading an input symbol is required for each state transition.
 A nondeterministic finite automaton (NFA), or nondeterministic finite state machine, does not need to obey these restrictions. In particular, every DFA is also an NFA. 
+
+
+
+Thompson's contruction
+Note: Special characters ".", "|", "*".
+
+Algorithm to construct an NFA from a regular expression. 
+This algorithm is used by keeping a stack  of "fragments" (smaller NFA'S)  of NFA’s and Manipulates the stack of fragments 
+to get the final product. Special characters pop from and push to the stack.
+
+This algorithm is credited to Ken Thompson.
+
+When coding this algorithm, note the transition function, start state and the set of accept states (can equal 1)
+More information can be found from this video: https://web.microsoftstream.com/video/946a7826-e536-4295-b050-857975162e6c
+
+
 
