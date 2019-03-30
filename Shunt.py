@@ -39,5 +39,4 @@ def shunt(infix):
         pofix, stack = pofix + stack[-1],stack[:-1]
 
     return pofix
-
 print(shunt("(a.b)|(c*.d)"))
