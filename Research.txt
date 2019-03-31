@@ -44,6 +44,13 @@ The Shunting Yard Algorithm
 http://www.oxfordmathcenter.com/drupal7/node/628
 
 Edsger Dijkstra developed his "Shunting Yard" algorithm to convert an infix expression into a postfix expression. It uses a stack; but in this case, the stack is used to hold operators rather than numbers. The purpose of the stack is to reverse the order of the operators in the expression. It also serves as a storage structure, since no operator can be printed until both of its operands have appeared.
-
 In this algorithm, all operands are printed (or sent to output) when they are read. There are more complicated rules to handle operators and parentheses.
+
+Regular Expression Matching Examples
+Infix: (a.a)*
+Postfix: aa.*
+
+Infix: (a.b)|(c*.d)
+Postfix: ab.c*d.|
+
 
